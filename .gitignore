@@ -33,3 +33,6 @@
 
 # Online judge helper script
 OnlineJudgeHelper/**
+
+# Setting files
+*.json
