@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Online judge helper script
+OnlineJudgeHelper/**
