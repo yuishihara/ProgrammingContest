@@ -121,7 +121,6 @@ int main(){
         for(int i = 0; i < sequence.size(); i++) {
             const char c = sequence[i];
             if(('a' <= c) && (c <= 'z')) {
-                cout << "enter" << endl;
                 if(alphabets.find(c) == alphabets.end()){
                     alphabets[c] = true;
                     count++;
