@@ -17,10 +17,10 @@ BASE_DIR=${HOME}/Coding
 INSTALL_DIR=${BASE_DIR}/ProgrammingContest
 if ! [ -d ${BASE_DIR} ]; then
     mkdir -p ${BASE_DIR}
-    if ! [ -d ${INSTALL_DIR} ]; then
-        cd ${BASE_DIR}
-        $(git clone git@github.com:yuishihara/ProgrammingContest.git)
-    fi
+fi
+if ! [ -d ${INSTALL_DIR} ]; then
+    cd ${BASE_DIR}
+    $(git clone git@github.com:yuishihara/ProgrammingContest.git)
 fi
 cd ${INSTALL_DIR}
 
