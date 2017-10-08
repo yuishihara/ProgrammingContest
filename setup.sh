@@ -44,7 +44,7 @@ done
 
 SETTING_FILE_PATH=${HOME}/Dropbox/Coding/ProgrammingContests
 LINUX_SETTING_FILE_NAME="setting_linux.json"
-MAX_SETTING_FILE_NAME="setting_mac.json"
+MAC_SETTING_FILE_NAME="setting_mac.json"
 SETTING_FILE_NAME=".onlinejudgehelper.setting.json"
 case ${OS} in
     linux)
