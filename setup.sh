@@ -1,5 +1,19 @@
 #!/usr/bin/env bash
 
+# Variable definitions
+case $(uname) in
+    Linux)
+        echo "This is an linux environment. Setting up for linux"
+        OS=linux
+        ;;
+    Darwin)
+        echo "This is an mac os environment. Setting up for mac"
+        OS=mac
+        ;;
+esac
+# End variable definitions
+
+
 ONLINE_JUDGE_HELPER_PATH=OnlineJudgeHelper
 if ! [ -d ${ONLINE_JUDGE_HELPER_PATH} ]; then
     echo "Cloning online judge helper..."
@@ -18,8 +32,15 @@ for service in ${SERVICES}; do
     fi
 done
 
-SETTING_FILE_PATH=${HOME}/Dropbox/Coding/ProgrammingContests/setting.json
+SETTING_FILE_PATH=${HOME}/Dropbox/Coding/ProgrammingContests
+LINUX_SETTING_FILE_NAME="setting_linux.json"
+MAX_SETTING_FILE_NAME="setting_mac.json"
 SETTING_FILE_NAME=".onlinejudgehelper.setting.json"
-if [ -f ${SETTING_FILE_PATH} ]; then
-    ln -ivs ${SETTING_FILE_PATH} ${HOME}/${SETTING_FILE_NAME}
-fi
+case ${OS} in
+    linux)
+        ln -ivs ${SETTING_FILE_PATH}/${LINUX_SETTING_FILE_NAME} ${HOME}/${SETTING_FILE_NAME}
+        ;;
+    mac)
+        ln -ivs ${SETTING_FILE_PATH}/${MAC_SETTING_FILE_NAME} ${HOME}/${SETTING_FILE_NAME}
+        ;;
+esac
