@@ -31,8 +31,13 @@
 *.out
 *.app
 
+# Temporal files
+*.swp
+*.DS_Store
+
 # Online judge helper script
 OnlineJudgeHelper/**
+*/**/oj.py
 
 # Setting files
 *.json
