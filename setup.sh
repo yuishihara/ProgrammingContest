@@ -13,6 +13,16 @@ case $(uname) in
 esac
 # End variable definitions
 
+BASE_DIR=${HOME}/Coding
+INSTALL_DIR=${BASE_DIR}/ProgrammingContest
+if ! [ -d ${BASE_DIR} ]; then
+    mkdir -p ${BASE_DIR}
+    if ! [ -d ${INSTALL_DIR} ]; then
+        cd ${BASE_DIR}
+        $(git clone git@github.com:yuishihara/ProgrammingContest.git)
+    fi
+fi
+cd ${INSTALL_DIR}
 
 ONLINE_JUDGE_HELPER_PATH=OnlineJudgeHelper
 if ! [ -d ${ONLINE_JUDGE_HELPER_PATH} ]; then
