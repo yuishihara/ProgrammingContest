@@ -1,5 +1,5 @@
 #/bin/bash
-USAGE="usage: ./newcode.sh [ProblemNumber] [ProblemClass], example: ./newcode.sh practice 2"
+USAGE="usage: ./newcode.sh [ContestId] [ProblemId], example: ./newcode.sh practice 2"
 
 if test $# -ge 3 ; then
     echo too much arguments
