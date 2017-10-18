@@ -13,5 +13,5 @@ fi
 
 CPP_SUFFIX=.cpp
 CPP_FILENAME=$1$2$CPP_SUFFIX
-oj.py --atcoder --submit -i $CPP_FILENAME $1 $2
+./oj.py --atcoder --submit -i $CPP_FILENAME $1 $2
 exit 0
