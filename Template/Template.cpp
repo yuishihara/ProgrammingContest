@@ -32,6 +32,8 @@ using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
 typedef vector<vector<int> > vvi;
+typedef vector<long> vl;
+typedef vector<vector<long> > vvl;
 typedef vector<string> vs;
 
 template<typename T>
